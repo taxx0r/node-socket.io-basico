@@ -67,7 +67,7 @@ Le pasamos 3 argumentos:
 
 En ejemplo si el objeto enviado como segundo parámetro incluye la propiedad usuario, el servidor enviará un 'Todo salió bien!' en el callback y si no enviará un 'Todo salió maaal!'.
 
-Veamos ahora esa parte en el servidor. 
+Veamos ahora esa parte en el servidor.
 
 ```
 client.on('enviarMensaje', (message, callback) => {
@@ -95,7 +95,7 @@ io.on('connection', (client) => {
 ```
 
 
-Para instalar y poder utilizar el ejemplo hay que hacer
+Para instalar y poder utilizar el ejemplo hay que hacer:
 
 ```
 npm install
