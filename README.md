@@ -59,6 +59,7 @@ socket.emit('enviarMensaje', {
 ```
 
 Le pasamos 3 argumentos:
+
     1 - 'enviarMensaje' que es el nombre que debemos escuchar en el servidor
     2 - el mensaje que estamos enviando, en este caso es un objeto con 2 propiedades (usuario y mensaje)
     3 - una función de callback para la retroalimentación, así el servidor nos puede decir si ha podido procesar correctamente el mensaje.
@@ -100,11 +101,11 @@ Para instalar y poder utilizar el ejemplo hay que hacer
 npm install
 ```
 
-Y ejecutarlo con 
+Y ejecutarlo con: 
 ```
 node server/server 
 ```
-o 
+o:
 ```
 nodemon server/server
 ```
