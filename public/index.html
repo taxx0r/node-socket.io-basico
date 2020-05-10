@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ejemplo básico socket.io</title>
+</head>
+
+<body>
+    <h1>Ejemplo básico socket.io</h1>
+    <p>Tendrás que revisar la consola del cliente y del servidor para ver los eventos :)</p>
+
+    <script src="socket.io/socket.io.js"></script>
+
+    <script>
+        var socket = io();
+
+        socket.on('connect', function() {
+            console.log('Conectado al servidor');
+        });
+
+        socket.on('disconnect', function() {
+            console.log('Perdimos conexión con el servidor');
+        });
+
+        socket.emit('enviarMensaje', {
+            usuario: 'Luis',
+            mensaje: 'Hola'
+        }, function(resp) {
+            console.log(resp);
+        });
+
+        socket.on('enviarMensaje', function(message) {
+            console.log(message);
+        });
+    </script>
+</body>
+
+</html>
